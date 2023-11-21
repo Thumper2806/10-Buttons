@@ -27,7 +27,7 @@ jobs:
         find /tmp/WLEDtemp -maxdepth 1 -mindepth 1 -name "*" -type d >> /tmp/WLEDtemp/wledfoldername
         cd `cat /tmp/WLEDtemp/wledfoldername`
         echo '[env:custom_build]' >>platformio.ini
-        echo 'extends = env:nodemcuv2' >>platformio.ini
+        echo 'extends = env:esp32dev' >>platformio.ini
         
         pio run -e custom_build || pio run -e custom_build
     - name: Copy Files
